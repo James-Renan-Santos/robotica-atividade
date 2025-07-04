@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const float BONUS = 500.0;  // valor fixo do bônus.
+    float salario;
+
+    cout << "Digite o salário: ";
+    cin >> salario;
+
+    float total = salario + BONUS;
+
+    cout << "Salário com bônus: " << total << endl;
+
+    return 0;
+}
