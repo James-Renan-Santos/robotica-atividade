@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+
+void dobrar(int* ponteiro) {
+    *ponteiro = *ponteiro * 2;
+}
+
+int main() {
+    int numero;
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+    dobrar(&numero);
+
+    cout << "O dobro do número é: " << numero << endl;
+
+    return 0;
+}
