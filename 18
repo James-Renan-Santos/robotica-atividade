@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+
+void incrementar(int* p) {
+    *p = *p + 1;  // ou (*p)++;
+}
+
+int main() {
+    int numero;
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+    incrementar(&numero);
+
+    cout << "Após o incremento: " << numero << endl;
+
+    return 0;
+}
