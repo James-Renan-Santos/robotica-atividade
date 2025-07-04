@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+void alterar(int valor, int &referencia) {
+    valor = valor + 10;         // (altera só a cópia) 
+    referencia = referencia + 10;  // (altera a variável original)
+}
+
+int main() {
+    int a = 5, b = 5;
+
+    cout << "Antes da função: \n";
+    cout << "a = " << a << ", b = " << b << endl;
+
+    alterar(a, b);  
+
+    cout << "\n Depois da função: \n";
+    cout << "a = " << a << " (não mudou)" << endl;
+    cout << "b = " << b << " (foi alterado)" << endl;
+
+    return 0;
+}
