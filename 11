@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero = 42;       
+    int* ponteiro;        
+
+    ponteiro = &numero;    
+
+    cout << "Valor da variável: " << *ponteiro << endl;
+    cout << "Endereço da variável: " << ponteiro << endl;
+
+    return 0;
+}
