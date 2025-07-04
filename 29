@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+
+void trocarInt (int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+
+void trocarFloat(float* a, float* b) {
+    float temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    // Teste com inteiros
+    int x = 10, y = 20;
+    cout << "Antes (int): x = " << x << ", y = " << y << endl;
+    trocarInt(&x, &y);
+    cout << "Depois (int): x = " << x << ", y = " << y << endl;
+
+    // Teste com floats
+    float a = 1.5, b = 3.8;
+    cout << "\n Antes (float): a = " << a << ", b = " << b << endl;
+    trocarFloat(&a, &b);
+    cout << "Depois (float): a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
