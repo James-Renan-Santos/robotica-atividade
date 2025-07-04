@@ -1,0 +1,40 @@
+#pragma once  // protege contra múltiplas inclusões
+
+#include <iostream>
+using namespace std;
+
+// Passagem por valor
+void exibirDobro(int valor) {
+    cout << "Dobro (por valor): " << valor * 2 << endl;
+}
+
+// Passagem por referência.
+void inverterSinal(int &numero) {
+    numero = -numero;
+}
+
+// Uso de ponteiro.
+void somarComCinco(int* ptr) {
+    *ptr = *ptr + 5;
+}
+
+#include "funcoes.h"
+
+int main() {
+    int n1 = 4;
+    int n2 = -10;
+    int n3 = 20;
+
+    // Passagem por valor.
+    exibirDobro(n1);  // não altera n1
+
+    // Passagem por referência.
+    inverterSinal(n2);  // altera n2
+    cout << "n2 após inverterSinal: " << n2 << endl;
+
+    // Ponteiro.
+    somarComCinco(&n3);  // altera n3
+    cout << "n3 após somarComCinco: " << n3 << endl;
+
+    return 0;
+}
