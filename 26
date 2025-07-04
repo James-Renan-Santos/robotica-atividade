@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+// Funções de cálculo
+int soma(int a, int b) {
+    return a + b;
+}
+
+int subtracao(int a, int b) {
+    return a - b;
+}
+
+int multiplicacao(int a, int b) {
+    return a * b;
+}
+
+
+void menu() {
+    int opcao, x, y;
+
+    cout << "=== MENU DE CALCULOS === \n";
+    cout << "1. Soma \n";
+    cout << "2. Subtracao\n";
+    cout << "3. Multiplicacao\n";
+    cout << "0. Sair \n";
+
+    cout << "Escolha uma opcao: ";
+    cin  >> opcao;
+
+    if (opcao == 0) {
+        cout << "Encerrando programa. \n";
+        return;
+    }
+
+    cout << "Digite o primeiro numero: ";
+    cin  >> x;
+    cout << "Digite o segundo numero: ";
+    cin  >> y;
+
+    switch (opcao) {
+        case 1:
+            cout << "Resultado da soma: " << soma(x, y) << endl;
+            break;
+        case 2:
+            cout << "Resultado da subtracao: " << subtracao(x, y) << endl;
+            break;
+        case 3:
+            cout << "Resultado da multiplicacao: " << multiplicacao(x, y) << endl;
+            break;
+        default:
+            cout << "Opcao inválida!" << endl;
+    }
+}
+
+int main() {
+    char continuar;
+    do {
+        menu();
+        cout << "\n Deseja voltar ao menu? (s/n): ";
+        cin  >> continuar;
+        cout << endl;
+    } while (continuar == 's' || continuar == 'S');
+    cout << "Programa finalizado.\n";
+    return 0;
+}
