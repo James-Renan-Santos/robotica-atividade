@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+// Constantes de limite
+const float LIMITE_SAQUE = 1000.0f;     // valor máximo por saque
+const float LIMITE_DEPOSITO = 5000.0f;  // valor máximo por depósito
+
+// Função para consultar saldo
+void consultaSaldo(float saldo) {
+    cout << " \n >> Seu saldo atual é: R$ " << saldo << endl;
+}
+
+// Função para saque
+void saque(float &saldo) {
+    float valor;
+    cout << " \n >> Quanto deseja sacar? ";
+    cin  >> valor;
+    if (valor <= 0) {
+        cout << "ERRO: Valor de saque inválido. \n";
+    }
+    else if (valor > LIMITE_SAQUE) {
+        cout << "ERRO: Excede o limite de saque (" << LIMITE_SAQUE << " R$).\n ";
+    }
+    else if (valor > saldo) {
+        cout << "ERRO: Saldo insuficiente. \n ";
+    }
+    else {
+        saldo -= valor;
+        cout << "Saque de R$ " << valor << " realizado com sucesso! \n";
+    }
+}
+
+// Função para depósito
+void deposito(float &saldo) {
+    float valor;
+    cout << "\n>> Quanto deseja depositar? ";
+    cin  >> valor;
+
+    if (valor <= 0) {
+        cout << "ERRO: Valor de depósito inválido.\n";
+    }
+    else if (valor > LIMITE_DEPOSITO) {
+        cout << "ERRO: Excede o limite de depósito (" << LIMITE_DEPOSITO << " R$).\n ";
+    }
+    else {
+        saldo += valor;
+        cout << "Depósito de R$ " << valor << " realizado com sucesso! \n";
+    }
+}
+
+int main() {
+    float saldo = 0.0f;
+    int opcao;
+
+    do {
+        cout << "\n=== CAIXA ELETRÔNICO ===\n";
+        cout << "1. Consulta de saldo\n";
+        cout << "2. Saque\n";
+        cout << "3. Depósito\n";
+        cout << "0. Sair\n";
+
+        cout << "Escolha uma opção: ";
+        cin  >> opcao;
+
+        switch (opcao) {
+            case 1:
+                consultaSaldo(saldo);
+                break;
+            case 2:
+                saque(saldo);
+                break;
+            case 3:
+                deposito(saldo);
+                break;
+            case 0:
+                cout << "\n Obrigado por usar nosso caixa eletrônico.\n";
+                break;
+            default:
+                cout << "Opção inválida! Tente novamente.\n";
+        }
+    } while (opcao != 0);
