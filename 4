@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip> // (Pra controlar a precisão)
+using namespace std;
+
+// setprecision -> Determinar a quant. de casas decimais. 
+
+int main() {
+    int A = 10, B = 3;
+    float X = 10.0f, Y = 3.0f;
+    double M = 10.0, N = 3.0;
+
+    // Operações.
+    int resultInt = A / B;           
+    float resultFloat = X / Y;        
+    double resultDouble = M / N;        
+
+    // Exibição dos resultados.
+    cout << " Exemplo: 10/3= " << resultInt << endl;
+
+    cout << " Exemplo: 10/3= " << setprecision(7);
+    cout << resultFloat << endl;
+
+    cout << " Exemplo: 10/3= " << setprecision (15);
+    cout << resultDouble << endl;
+
+    return 0;
+}
