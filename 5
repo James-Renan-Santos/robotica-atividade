@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>  
+using namespace std;
+
+int main() {
+    std::string nome;
+    int idade;
+
+    // Entrada do nome
+    cout << "Digite seu nome: ";
+    getline(cin, nome);  
+
+    // Entrada da idade
+    cout << "Digite sua idade: ";
+    cin >> idade;
+
+    // Saída personalizada
+    if ( idade = 0 || idade > 110) {
+        cout << "Idade Inválida." << endl;
+    } else {
+        cout << "Então, sua idade, " << nome << ", é de " << idade << endl;
+    }
+
+    return 0;
+}
