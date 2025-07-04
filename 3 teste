@@ -1,0 +1,14 @@
+#include <iostream>
+#define PI 3.14159
+using namespace std;
+
+int main() {
+    float raio;
+    cout << "Digite o raio do circulo: ";
+    cin >> raio;
+
+    float area = PI * raio * raio;
+    cout << "Area do circulo: " << area << endl;
+
+    return 0;
+}
