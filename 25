@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+
+void inverterSinal(int &valor) {
+    valor = valor * -1;
+}
+
+int main() {
+    int numero;
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+    inverterSinal(numero);  
+
+    cout << "Valor com sinal invertido: " << numero << endl;
+
+    return 0;
+}
