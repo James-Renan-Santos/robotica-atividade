@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+void verificarSituacao(string nome, float nota) {
+    cout << "\n Aluno: " << nome << endl;
+
+    if (nota >= 7) {
+        cout << "Situação: Aprovado" << endl;
+    } else {
+        cout << "Situação: Reprovado" << endl;
+    }
+}
+
+int main() {
+    string nome;
+    float nota;
+
+    cout << "Digite o nome do aluno: ";
+    getline(cin, nome);
+    cout << "Digite a nota do aluno: ";
+    cin >> nota;
+
+    // Chamada da função.
+    verificarSituacao(nome, nota);
+
+    return 0;
+}
