@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+struct Pessoa {
+    string nome;
+    int idade;
+    float altura;
+};
+
+
+void imprimirPessoa(Pessoa* p) {
+    cout << "\n Dados da pessoa: \n";
+    cout << "Nome:   " << p->nome   << ";" << endl;
+    cout << "Idade:  " << p->idade  << " anos;" << endl;
+    cout << "Altura: " << p->altura << " m."   << endl;
+}
+
+int main() {
+    Pessoa pessoa;
+
+    // Leitura dos dados.
+    cout << "Digite o nome: ";
+    getline(cin, pessoa.nome);
+    cout << "Digite a idade: ";
+    cin >> pessoa.idade;
+    cout << "Digite a altura (em metros): ";
+    cin >> pessoa.altura;
+
+    // Chamada da função.
+    imprimirPessoa(&pessoa);
+
+    return 0;
+}
