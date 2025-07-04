@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n1, n2;
+
+    // Entrada dados
+    cout << "Digite o primeiro número (inteiro): ";
+    cin >> n1;
+    cout << "Agora, digite o segundo: ";
+    cin >> n2;
+
+    // Operações
+    int soma = n1 + n2;
+    int subtracao = n1 - n2;
+    int multiplicacao = n1 * n2;
+
+    cout << "\n Resultados:\n";
+    cout << "Soma: " << soma << endl;
+    cout << "Subtração: " << subtracao << endl;
+    cout << "Multiplicação: " << multiplicacao << endl;
+
+
+    //Verificação da divisão.
+    if (n2 != 0) {
+        float divisao = (n1) / n2; 
+        cout << "Divisão: " << divisao << endl; } 
+    else {
+        cout << "Divisão: Divisão por zero não é permitida." << endl; }
+
+    return 0;
+}
